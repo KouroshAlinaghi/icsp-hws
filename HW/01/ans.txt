@@ -1,0 +1,107 @@
+1-
+  
+  1) 
+
+    x   | y   | c 
+    10  | 5   | 51   
+    int | int | int
+
+  2)
+
+    x   | y     | z     | ch
+    6   | 6.14  | 22.20 | 'z'
+    int | flaot | float | char
+
+  3)
+  
+    a | b | c | d | e | f
+    5 | 3 | 7 | 1 | 6 | 1 
+
+------------------------------
+
+2-
+
+  1)
+
+    7 | ( ( 2 + 3 ) << 2 ) => ans = 23
+
+  2) 
+
+    9 << ( ( ( 1 + 5 ) & 4 ) ) % 3 ) => ans = 0
+
+  3)
+    
+    6 | ( 3 - ( ( 8 % 2 ) ^ 2 ) ); => ans = 7
+
+------------------------------
+
+3-
+
+1) "" is wrong: #include <stdio.h>
+4) cannot redifine a variable, just had to change its value: b = 5;
+7) arguments passed to a function should be seperated by comma: printf("%d\n", b % a);
+14) \n should be included in the string: printf("%d %d \n", b, a);
+17) should've defined c variable before passing its pointer to scanf: char c;
+
+output: 
+1
+6 1
+c (this is our input that we've typed into the command line)
+c
+
+------------------------------
+
+4-
+
+START
+TAKE INPUT n
+CREATE INT VAR i = 1
+LOOP WHILE i <= n {
+  IF i IS PRIME AND IS ODD (i % 2 == 0) {
+    PRINT i
+  }
+  i = i + 1
+}
+FINISH
+
+// Checking if a number is prime
+START 
+TAKE INPUT n
+CREATE INT VAR i = 1
+LOOP WHILE i <= [sqrt(n)] { // floor of square root of n
+  IF n % i == 0 {
+    RETURN false AND EXIT THE FUNCTION
+  }
+  i = i + 1
+}
+RETURN true // (this line would be executed only of function didn't return from inside of the loop)
+FINISH
+
+-------------------------------------------
+
+5-
+
+START
+TAKE INPUT a AND b
+CREATE INT VAR a_last_digit = a % 10
+CREATE INT VAR b_last_digit = b % 10
+CHECK IF GREATEST COMMON DEVISOR OF a_last_digit AND b_last_digit IS 1:
+  IF IT'S ONE => THEY ARE RELATIVELY PRIME
+  IF IT'S NOT ONE => THEY ARE NOT RELATIVELY PRIME
+FINISH
+
+// finding gcb of two numbers a and b
+START
+TAKE INPUT a AND b
+CREATE INT VAR c
+LOOP {
+  IF b == 0 {
+    RETURN a // The answer
+  }
+  
+  // After each loop (a = b) and (b = a % b), when we reach to a point
+  // where b equals to zero, than a is the gcb of a and b
+  c = a;
+  a = b;
+  b = a % b;
+}
