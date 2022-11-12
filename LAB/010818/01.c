@@ -8,7 +8,7 @@ int main() {
   scanf("%d", &n);
 
   for (int i=0; i<=n; i++) {
-    sum += fact(i) * pow(-1, i);
+    sum += fact(i) * (int)pow(-1, i);
   }
 
   printf("%d", sum);

@@ -21,6 +21,7 @@ int main() {
     int i = 1;
     z = z + i; // i is not defined in an outer scope.
 
+    // Unlimited loop
     do {
         int i = 0;
         z = i + 1;
