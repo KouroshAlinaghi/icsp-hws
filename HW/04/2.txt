@@ -1,0 +1,26 @@
+START
+
+TAKE INPUT list AS AN ARRAY OF INTS
+TAKE INPUT a AS INT
+
+list[LENGTH(list)] = a
+
+i = 0
+j = 0
+
+WHILE (i < LENGTH(list)-1) {
+  WHILE (j < LENGTH(list) - i - 1) {
+    if (list[j] > list[j+1]) {
+      // We'll switch values of list[j] and list[j+1]:
+      temp = list[j]
+      list[j] = list[j+1]
+      list[j+1] = temp
+    }
+
+    d = d + 1
+  }
+
+  i = i + 1
+}
+
+END
