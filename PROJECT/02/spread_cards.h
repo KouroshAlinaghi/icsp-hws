@@ -1,0 +1,1 @@
+void spread_cards(int cards[4][11], int players_cards[4][4][11], char *hokm);
